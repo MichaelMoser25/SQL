@@ -25,6 +25,66 @@ The data in RDBMS is stored in database objects called tables. A table is a coll
 
 ### Important SQL Commands
 ```SELECT``` - extracts data from a database
+```UPDATE``` - updates data in a database
+```DELETE``` - deletes data from a database
+```INSERT INTO``` - inserts new data into a database
+```CREATE DATABASE``` - creates a new database
+```ALTER DATABASE``` - modifies a database
+```CREATE TABLE``` - creates a new table
+```ALTER TABLE``` - modifies a table
+```DROP TABLE``` - deletes a table
+```CREATE INDEX``` - creates an index (search key)
+```DROP INDEX``` - deletes an index
+
+Return data from the Customers table:
+```SELECT CustomerName, City FROM Customers;```
+
+####Syntac
+```
+SELECT column1, column2, ...
+FROM tableName;
+```
+
+
+If you want to return all columns, without specifying every column name, you can use the ```SELECT *``` syntax
+```SELECT * FROM Customers;```
+
+### The SQL SELECT DISTINCT Statement
+- Used to return only distinct (different) values
+
+```SELECT DISTINCT Country FROM Customers;```
+
+#### Syntax
+```
+SELECT DISTINCT column1, column2, ...
+FROM table_name;
+```
+
+SELECT Without DISTINCT
+```SELECT Country FROM Customers;```
+
+
+
+### COUNT DISTINCT
+- Using ```DISTINCT``` keyword in a function called ```COUNT```, we can return the number of different countries
+```SELECT COUNT(DISTINCE Country) FROM Customers;```
+
+workaround for MS Access:
+```
+SELECT Count(*) AS DistinctCountries
+FROM (SELECT DISTINCT Country FROM Customers);
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 
