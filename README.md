@@ -35,8 +35,6 @@ The data in RDBMS is stored in database objects called tables. A table is a coll
 ```CREATE INDEX``` - creates an index (search key)
 ```DROP INDEX``` - deletes an index
 
----------------------------
-
 Return data from the Customers table:
 ```SELECT CustomerName, City FROM Customers;```
 
@@ -51,7 +49,7 @@ If you want to return all columns, without specifying every column name, you can
 
 ---------------------------
 
-### The SQL SELECT DISTINCT Statement
+### SELECT DISTINCT 
 - Used to return only distinct (different) values
 
 ```SELECT DISTINCT Country FROM Customers;```
