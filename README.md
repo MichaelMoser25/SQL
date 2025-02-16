@@ -5,7 +5,6 @@ Statement used to select ALL records from a table named 'Customers'
 ```
 SELECT * FROM Customers;
 ```
----------------------------
 ### What is SQL?
 - SQL - Structured Query Language
 - SQL lets you access and manipulate databases
@@ -36,6 +35,8 @@ The data in RDBMS is stored in database objects called tables. A table is a coll
 ```CREATE INDEX``` - creates an index (search key)
 ```DROP INDEX``` - deletes an index
 
+---------------------------
+
 Return data from the Customers table:
 ```SELECT CustomerName, City FROM Customers;```
 
@@ -45,9 +46,10 @@ SELECT column1, column2, ...
 FROM tableName;
 ```
 
-
 If you want to return all columns, without specifying every column name, you can use the ```SELECT *``` syntax
 ```SELECT * FROM Customers;```
+
+---------------------------
 
 ### The SQL SELECT DISTINCT Statement
 - Used to return only distinct (different) values
@@ -63,7 +65,7 @@ FROM table_name;
 SELECT Without DISTINCT
 ```SELECT Country FROM Customers;```
 
-
+---------------------------
 
 ### COUNT DISTINCT
 - Using ```DISTINCT``` keyword in a function called ```COUNT```, we can return the number of different countries
@@ -74,6 +76,8 @@ workaround for MS Access:
 SELECT Count(*) AS DistinctCountries
 FROM (SELECT DISTINCT Country FROM Customers);
 ```
+
+---------------------------
 
 
 
