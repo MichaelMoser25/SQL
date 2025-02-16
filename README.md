@@ -39,7 +39,7 @@ The data in RDBMS is stored in database objects called tables. A table is a coll
 Return data from the Customers table:
 ```SELECT CustomerName, City FROM Customers;```
 
-####Syntac
+#### Syntax
 ```
 SELECT column1, column2, ...
 FROM tableName;
