@@ -5,7 +5,7 @@ Statement used to select ALL records from a table named 'Customers'
 ```
 SELECT * FROM Customers;
 ```
-
+---------------------------
 ### What is SQL?
 - SQL - Structured Query Language
 - SQL lets you access and manipulate databases
