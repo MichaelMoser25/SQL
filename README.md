@@ -77,6 +77,22 @@ FROM (SELECT DISTINCT Country FROM Customers);
 
 ---------------------------
 
+### WHERE
+- ```WHERE``` is used to filter records
+- Used to extract records for a specified condition
+
+Select all customers from Mexico
+```
+SELECT * FROM Customers;
+WHERE Country='Mexico';
+
+Select all customers with a CustomerID greater than 80
+```
+SELECT * FROM Customers
+WHERE CustomerID > 80;
+```
+
+### ODER BY
 
 
 
