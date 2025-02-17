@@ -85,6 +85,7 @@ Select all customers from Mexico
 ```
 SELECT * FROM Customers;
 WHERE Country='Mexico';
+```
 
 Select all customers with a CustomerID greater than 80
 
