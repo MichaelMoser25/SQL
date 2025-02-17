@@ -89,8 +89,10 @@ WHERE Country='Mexico';
 
 Select all customers with a CustomerID greater than 80
 
-```SELECT * FROM Customers
-WHERE CustomerID > 80;```
+```
+SELECT * FROM Customers
+WHERE CustomerID > 80;
+```
 
 ### ODER BY
 
