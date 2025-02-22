@@ -1,3 +1,5 @@
+The ORDER BY keyword is used to sort the result-set in ascending or descending order.
+
 # SQL
 
 Statement used to select ALL records from a table named 'Customers'
@@ -95,10 +97,42 @@ WHERE CustomerID > 80;
 ```
 
 ### ODER BY
+The ORDER BY keyword is used to sort the result-set in ascending or descending order.
+
+Sort the products by price:
+```
+SELECT * FROM Products
+ORDER BY Price;
+```
+
+### ODER BY DESC
+The ORDER BY keyword sorts the records in ascending order by default. To sort the records in descending order, use the DESC keyword.
+
+```
+SELECT * FROM Products
+ORDER BY Price DESC;
+```
 
 
+### Order Alphabetically
+For string values the ORDER BY keyword will order alphabetically:
 
+```
+SELECT * FROM Products
+ORDER BY ProductName;
+```
 
+### ORDER BY Several Columns
+```
+SELECT * FROM Customers
+ORDER BY Country, CustomerName;
+```
+
+### Using Both ASC and DESC
+```
+SELECT * FROM Customers
+ORDER BY Country ASC, CustomerName DESC;
+```
 
 
 
