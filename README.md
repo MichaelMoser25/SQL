@@ -135,6 +135,100 @@ ORDER BY Country ASC, CustomerName DESC;
 ```
 
 
+### SQL AND Operator
+The WHERE clause can contain one or many AND operators
+
+The AND operator is used to filter records based on more than 1 condition, like if you want to return all customers from Spain that start with the letter 'G':
+
+Example: Select all customers from Spain that starts with the letter 'G':
+```
+SELECT *
+FROM Customers
+WHERE Country = 'Spain' AND CustomerName LIKE 'G%';
+```
+
+The following SQL statement selects all fields from Customers where Country is "Germany" AND City is "Berlin" AND PostalCode is higher than 12000:
+
+```
+SELECT * FROM Customers
+WHERE Country = 'Germany'
+AND City = 'Berlin'
+AND PostalCode > 12000;
+```
+
+#### Combining AND and OR
+```
+SELECT * FROM Customers
+WHERE Country = 'Spain' AND (CustomerName LIKE 'G%' OR CustomerName LIKE 'R%');
+```
+
+### SQL OR Operator
+Select all customers from Germany or Spain
+
+```
+SELECT *
+FROM Customers
+WHERE Country = 'Germany' OR Country = 'Spain';
+```
+
+```
+SELECT * FROM Customers
+WHERE City = 'Berlin' OR CustomerName LIKE 'G%' OR Country = 'Norway';
+```
+
+### The NOT Operator
+The NOT operator is used in combination with other operators to give the opposite result, also called the negative result.
+
+Select only the customers that are NOT from Spain:
+```
+SELECT * FROM Customers
+WHERE NOT Country = 'Spain';
+```
+
+Syntax
+```
+SELECT column1, column2, ...
+FROM table_name
+WHERE NOT condition;
+```
+
+#### NOT LIKE
+Select customers that does not start with the letter 'A':
+```
+SELECT * FROM Customers
+WHERE CustomerName NOT LIKE 'A%';
+```
+
+#### NOT BETWEEN
+Select customers with a customerID not between 10 and 60:
+```
+SELECT * FROM Customers
+WHERE CustomerID NOT BETWEEN 10 AND 60;
+```
+
+#### NOT IN
+Select customers that are not from Paris or London:
+```
+SELECT * FROM Customers
+WHERE City NOT IN ('Paris', 'London');
+```
+
+#### NOT Greater Than
+Select customers with a CustomerId not greater than 50:
+```
+SELECT * FROM Customers
+WHERE NOT CustomerID > 50;
+```
+
+#### NOT Less Than
+Select customers with a CustomerID not less than 50:
+```
+SELECT * FROM Customers
+WHERE NOT CustomerId < 50;
+```
+
+
+
 
 
 
