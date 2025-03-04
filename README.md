@@ -227,10 +227,59 @@ SELECT * FROM Customers
 WHERE NOT CustomerId < 50;
 ```
 ---------------------------
+### INSERT INTO Statement
+Syntax
+```
+INSERT INTO table_name (column1, column2, column3,...)
+VALUES (value1, value2, value3,...);
 
+INSERT INTO table_name
+VALUES (value1, value2, value3, ...);
+```
 
+The following SQL statement inserts a new record in the "Customers" table:
+```
+INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
+```
 
+Multiple inserts
+```
+INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES
+('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway'),
+('Greasy Burger', 'Per Olsen', 'Gateveien 15', 'Sandnes', '4306', 'Norway'),
+('Tasty Tee', 'Finn Egan', 'Streetroad 19B', 'Liverpool', 'L1 0AA', 'UK');
+```
+---------------------------
+### NULL values
+IS NULL Syntax
+```
+SELECT column_names
+FROM table_name
+WHERE column_name IS NULL;
+```
 
+IS NOT NULL Syntax
+```
+SELECT column_names
+FROM table_name
+WHERE column_name IS NOT NULL;
+```
+
+Example:
+```
+SELECT CustomerName, ContactName, Address
+FROM Customers
+WHERE Address IS NULL;
+
+SELECT CustomerName, ContactName, Address
+FROM Customers
+WHERE Address IS NOT NULL;
+```
+---------------------------
+### UPDATE Statement
+The UPDATE statement is used to modify the existing records in a table
 
 
 
