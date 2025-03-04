@@ -175,7 +175,7 @@ WHERE Country = 'Germany' OR Country = 'Spain';
 SELECT * FROM Customers
 WHERE City = 'Berlin' OR CustomerName LIKE 'G%' OR Country = 'Norway';
 ```
-
+---------------------------
 ### The NOT Operator
 The NOT operator is used in combination with other operators to give the opposite result, also called the negative result.
 
@@ -226,6 +226,7 @@ Select customers with a CustomerID not less than 50:
 SELECT * FROM Customers
 WHERE NOT CustomerId < 50;
 ```
+---------------------------
 
 
 
