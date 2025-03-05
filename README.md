@@ -277,13 +277,29 @@ SELECT CustomerName, ContactName, Address
 FROM Customers
 WHERE Address IS NOT NULL;
 ```
----------------------------
-### UPDATE Statement
+# UPDATE Statement
 The UPDATE statement is used to modify the existing records in a table
 
+Syntax
+```
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+```
+The ```WHERE``` clause specifies which record(s) that should be updated. If you omit the ```WHERE``` clause, all records in the table will be updated!
 
+The following SQL statement updates the first customer (CustomerID = 1) with a new contact person and a new city.
+```
+UPDATE Customers
+Set ContactName = 'Michael Moser', City='Toronto'
+WHERE CustomerID = 1;
+```
 
-
+Update all records
+```
+UPDATE Customers
+SET ContactName='Juan';
+```
 
 
 
