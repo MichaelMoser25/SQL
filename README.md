@@ -301,5 +301,127 @@ UPDATE Customers
 SET ContactName='Juan';
 ```
 
+# DELETE
+DELETE Syntax
+```DELETE FROM table_name WHERE condition;```
+
+Delete the customer "Alfreds Futterkiste" from the "Customers" table
+```
+DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
+```
+
+### Delete all records
+```DELETE FROM table_name;```
+delete all rows in the "Customers" table:
+```
+DELETE FROM Customers;
+```
+
+### Delete a table
+``` DROP TABLE Customers;```
+
+# SELECT TOP
+- The ```SELECT TOP``` clause is used to specify the number of records to return
+- Useful for large tables with thousands of records returning a large number of records can impact performance
+
+SQL Server / MS Access Syntax:
+```
+SELECT TOP number|percent column_name(s)
+FROM table_name
+WHERE condition;
+```
+MySQL Syntax:
+```
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+LIMIT number;
+```
+
+## LIMIT
+Select the first 3 records of the Customers table:
+```
+SELECT * FROM Customers
+LIMIT 3;
+```
+
+## FETCH FIRST
+Select the first 3 records of the Customers table
+```
+SELECT * FROM Customers
+FETCH FIRST 3 ROWS ONLY;
+```
+## TOP PERCENT
+Select the first 50% of the records from the "Customers" table (for SQL Server/MS Access)
+```
+SELECT TOP 50 PERCENT * FROM Customers;
+```
+
+Adding a where clause
+```
+SELECT * FROM Customers
+WHERE Country='Germany'
+FETCH FIRST 3 ROWS ONLY;
+```
+
+Adding ORDER BY
+Sort the result reverse alphabetically by CustomerName, and return the first 3 records:
+```
+SELECT TOP 3 * FROM Customers
+ORDER BY CustomerName DESC;
+```
+
+```
+SELECT * FROM Customers
+ORDER BY CustomerName DESC
+LIMIT 3;
+```
+
+# Aggregate Functions
+- An aggregate function is a function that performs a calculation on a set of values, and returns a single value.
+- Aggregate functions are often used with the ```GROUP BY``` clause of the ```SELECT``` statement. The ```GROUP BY``` clause splits the result-set into groups of values and the aggregate function can be used to return a single value for each group.
+
+The most commonly used SQL aggregate functions are:
+```MIN()``` - returns the smallest value within the selected column
+```MAX()``` - returns the largest value within the selected column
+```COUNT()``` - returns the number of rows in a set
+```SUM()``` - returns the total sum of a numerical column
+```AVG()``` - returns the average value of a numerical column
+
+Aggregate functions ignore null values (except for ```COUNT()```).
+
+# MIN() & MAX() Functions
+Find the lowest price in the Price column:
+```
+SELECT MIN(Price)
+FROM Products;
+```
+
+Find the highest price in the Price column:
+```
+SELECT MAX(Price)
+FROM Products;
+```
+
+When you use ```MIN()``` or ```MAX()```, the returned column will not have a descriptive name. To give the column a descriptive name, use the ```AS``` keyword:
+```
+SELECT MIN(Price) AS SmallestPRICE
+FROM Products;
+```
+
+Here we use the ```MIN()``` function and the ```GROUP BY``` clause, to return the smallest price for each category in the Products table:
+```
+SELECT MIN(Price) AS SmallestPrice, CategoryID
+FROM Products
+GROUP BY CategoryID;
+```
+
+
+
+
+
+
+
+
 
 
